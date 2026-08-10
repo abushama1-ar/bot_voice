@@ -4,7 +4,6 @@
 
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?style=for-the-badge&logo=nodedotjs)](https://nodejs.org/)
 [![Discord.js](https://img.shields.io/badge/Discord.js-14.x-5865F2?style=for-the-badge&logo=discord)](https://discord.js.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 [![Support](https://img.shields.io/badge/💬-Discord-5865F2?style=for-the-badge&logo=discord)](https://discord.gg/REenS3jB72)
 [![PayPal](https://img.shields.io/badge/💰-Donate-00457C?style=for-the-badge&logo=paypal)](https://paypal.me/Alaaabushamaa)
 [![Hosting](https://img.shields.io/badge/🚀-Wispbyte-6A0DAD?style=for-the-badge&logo=cloud)](https://wispbyte.com/)
@@ -15,18 +14,17 @@
 
 ## 📖 نبذة
 
-بوت ديسكورد لتشغيل الموسيقى محلياً من مجلد `audios`، مع لوحة تحكم ويب لإدارة الأغاني والمستخدمين. مبني بـ Node.js و Discord.js.
+بوت ديسكورد بدائي لتشغيل الموسيقى محلياً من مجلد `audios`، مبني بـ Node.js و Discord.js. المشروع مفتوح المصدر وقابل للتطوير من قبل المطورين.
 
 ---
 
 ## ✨ المميزات
 
-- تشغيل محلي بالكامل من مجلد `audios`
-- لوحة تحكم ويب Dashboard
-- أوامر: Play, Pause, Skip, Stop, Volume
+- تشغيل محلي من مجلد `audios`
+- أوامر أساسية: Play, Pause, Skip, Stop
 - ملف `start.cmd` للتشغيل السريع في ويندوز
 - أداة تنظيف `clean.js`
-- دعم مجلدات متعددة داخل `audios`
+- هيكل بسيط مناسب للتطوير
 
 ---
 
@@ -34,7 +32,7 @@
 📁 Local-Music-Bot/
 ├── 📁 audios/ # ضع ملفاتك الصوتية هنا
 ├── 📁 node_modules/ # اعتماديات المشروع
-├── 📄 index.js # الملف الرئيسي
+├── 📄 index.js # الملف الرئيسي (التوكن بداخله)
 ├── 📄 clean.js # أداة التنظيف
 ├── 📄 package.json # معلومات المشروع
 ├── 📄 package-lock.json # قفل الإصدارات
@@ -50,15 +48,28 @@ text
 # 1. تثبيت الاعتماديات
 npm install
 
-# 2. إنشاء ملف .env وأضف فيه:
-DISCORD_TOKEN=your_bot_token_here
-DASHBOARD_PORT=3000
+# 2. تعديل التوكن في ملف index.js
+# ابحث عن: client.login('YOUR_TOKEN_HERE')
+# واستبدله بتوكن البوت الخاص بك
 
 # 3. ضع ملفاتك الصوتية في مجلد audios/
 
 # 4. تشغيل البوت
 npm start
-# أو استخدم ملف start.cmd (للمستخدمين ويندوز)
+# أو استخدم ملف start.cmd
+🛠️ للتطوير
+المشروع بدائي ويحتاج إلى تطويرات مثل:
+
+إضافة نظام .env للتوكن
+
+إضافة لوحة تحكم Dashboard
+
+دمج قاعدة بيانات
+
+إضافة أوامر أكثر
+
+تحسين إدارة الأخطاء
+
 ☁️ استضافة مجانية
 https://img.shields.io/badge/%F0%9F%9A%80_%D8%A7%D8%B3%D8%AA%D8%B6%D8%A7%D9%81%D8%A9_%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9-Wispbyte-6A0DAD?style=for-the-badge&logo=cloud
 
@@ -67,9 +78,6 @@ https://img.shields.io/badge/%F0%9F%92%AC_%D8%A7%D9%86%D8%B6%D9%85_%D9%84%D9%84%
 
 🤝 دعم المشروع
 https://img.shields.io/badge/%F0%9F%92%B0_%D8%AF%D8%B9%D9%85_%D8%B9%D8%A8%D8%B1_PayPal-00457C?style=for-the-badge&logo=paypal
-
-📝 رخصة
-MIT © Local Music Bot
 
 <div align="center">
 ⭐ لا تنسَ وضع نجمة للمشروع!
