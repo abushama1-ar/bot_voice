@@ -1,248 +1,77 @@
-🎵 Local Music Discord Bot
+<div align="center">
 
-Local Music Discord Bot هو بوت Discord بسيط لتشغيل الملفات الصوتية المحلية، مبني باستخدام JavaScript وNode.js.
+# 🎵 Local Music Discord Bot
 
-فكرة المشروع بسيطة ومباشرة: ضع ملفاتك الصوتية داخل مجلد audios، شغّل البوت، واستخدمه لتشغيل الصوت داخل سيرفر Discord.
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?style=for-the-badge&logo=nodedotjs)](https://nodejs.org/)
+[![Discord.js](https://img.shields.io/badge/Discord.js-14.x-5865F2?style=for-the-badge&logo=discord)](https://discord.js.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Support](https://img.shields.io/badge/💬-Discord-5865F2?style=for-the-badge&logo=discord)](https://discord.gg/REenS3jB72)
+[![PayPal](https://img.shields.io/badge/💰-Donate-00457C?style=for-the-badge&logo=paypal)](https://paypal.me/Alaaabushamaa)
+[![Hosting](https://img.shields.io/badge/🚀-Wispbyte-6A0DAD?style=for-the-badge&logo=cloud)](https://wispbyte.com/)
 
-المشروع لا يحاول أن يقدم نفسه كبوت موسيقى ضخم أو كنظام متكامل ينافس المشاريع الكبيرة.
+</div>
 
-الفكرة الأساسية هي توفير Base بسيطة للمطورين.
+---
 
-يمكنك أخذ المشروع، فهم الكود، تعديله، إعادة هيكلته، إضافة أنظمة جديدة، تطوير الـDashboard، أو حتى إعادة بناء أجزاء كبيرة منه بالطريقة التي تناسبك.
+## 📖 نبذة
 
-Simple by design. Built for developers.
+بوت ديسكورد لتشغيل الموسيقى محلياً من مجلد `audios`، مع لوحة تحكم ويب لإدارة الأغاني والمستخدمين. مبني بـ Node.js و Discord.js.
 
-✨ Features
-🎵 تشغيل الملفات الصوتية المحلية.
-📁 استخدام مجلد audios لتخزين الملفات الصوتية.
-🤖 Discord Bot مبني باستخدام Node.js.
-🟨 JavaScript.
-📦 إدارة التبعيات باستخدام npm.
-🎛️ Dashboard للإدارة.
-🔧 بنية بسيطة وقابلة للتعديل.
-🚀 قابل للتطوير وإعادة البناء.
+---
 
-المشروع حاليًا بسيط، وهذا مقصود؛ الهدف هو أن يكون نقطة بداية يستطيع المطور البناء فوقها.
+## ✨ المميزات
 
-🧑‍💻 Build Something Bigger
+- تشغيل محلي بالكامل من مجلد `audios`
+- لوحة تحكم ويب Dashboard
+- أوامر: Play, Pause, Skip, Stop, Volume
+- ملف `start.cmd` للتشغيل السريع في ويندوز
+- أداة تنظيف `clean.js`
+- دعم مجلدات متعددة داخل `audios`
 
-يمكنك تطوير المشروع وإضافة أي أنظمة تحتاجها، مثل:
+---
 
-🎶 Queue System
-⏭️ Next / Previous
-🔀 Shuffle
-🔁 Loop
-🔊 Volume Control
-🎚️ Audio Filters
-📻 Streaming
-🌐 Web Dashboard
-🔐 Authentication
-💾 Database
-📊 Statistics
-🛡️ Permission System
-🧩 Plugin System
-⚙️ Configuration System
+## 📂 هيكل المشروع
+📁 Local-Music-Bot/
+├── 📁 audios/ # ضع ملفاتك الصوتية هنا
+├── 📁 node_modules/ # اعتماديات المشروع
+├── 📄 index.js # الملف الرئيسي
+├── 📄 clean.js # أداة التنظيف
+├── 📄 package.json # معلومات المشروع
+├── 📄 package-lock.json # قفل الإصدارات
+└── 📄 start.cmd # تشغيل سريع (ويندوز)
 
-أو يمكنك إعادة هيكلة المشروع بالكامل وبناء نسخة مختلفة منه.
+text
 
-الكود هو نقطة البداية، والتطوير بيدك.
+---
 
-🚀 Local Installation
+## ⚙️ طريقة التثبيت والتشغيل
 
-لتشغيل المشروع على جهازك، تحتاج إلى Node.js و Git.
-
-ابدأ باستنساخ المستودع:
-
-git clone https://github.com/abushama1-ar/bot_voic.git
-
-ثم انتقل إلى مجلد المشروع:
-
-cd bot_voic
-
-بعد ذلك قم بتثبيت جميع التبعيات:
-
+```bash
+# 1. تثبيت الاعتماديات
 npm install
 
-ضع ملفات الصوت التي تريد تشغيلها داخل مجلد:
+# 2. إنشاء ملف .env وأضف فيه:
+DISCORD_TOKEN=your_bot_token_here
+DASHBOARD_PORT=3000
 
-audios/
+# 3. ضع ملفاتك الصوتية في مجلد audios/
 
-مثلًا:
-
-audios/song-01.mp3
-
-ثم شغّل البوت باستخدام:
-
+# 4. تشغيل البوت
 npm start
+# أو استخدم ملف start.cmd (للمستخدمين ويندوز)
+☁️ استضافة مجانية
+https://img.shields.io/badge/%F0%9F%9A%80_%D8%A7%D8%B3%D8%AA%D8%B6%D8%A7%D9%81%D8%A9_%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9-Wispbyte-6A0DAD?style=for-the-badge&logo=cloud
 
-أو يمكنك تشغيله مباشرة باستخدام:
+💬 الدعم والمجتمع
+https://img.shields.io/badge/%F0%9F%92%AC_%D8%A7%D9%86%D8%B6%D9%85_%D9%84%D9%84%D8%B3%D9%8A%D8%B1%D9%81%D8%B1-Nova_System-5865F2?style=for-the-badge&logo=discord
 
-node index.js
+🤝 دعم المشروع
+https://img.shields.io/badge/%F0%9F%92%B0_%D8%AF%D8%B9%D9%85_%D8%B9%D8%A8%D8%B1_PayPal-00457C?style=for-the-badge&logo=paypal
 
-وعلى Windows يمكنك أيضًا استخدام ملف:
+📝 رخصة
+MIT © Local Music Bot
 
-start.cmd
+<div align="center">
+⭐ لا تنسَ وضع نجمة للمشروع!
 
-⚡ Quick Start
-
-إذا كان Git وNode.js مثبتين لديك، فالخطوات هي:
-
-git clone https://github.com/abushama1-ar/bot_voic.git
-
-cd bot_voic
-
-npm install
-
-npm start
-
-أو:
-
-node index.js
-
-📁 Project Structure
-
-المشروع يحتوي حاليًا على بنية بسيطة:
-
-bot_voic/
-
-├── audios/ — ملفات الصوت المحلية
-├── node_modules/ — الحزم المثبتة
-├── clean.js — ملف مساعد
-├── index.js — ملف تشغيل البوت
-├── package.json — إعدادات المشروع والتبعيات
-├── package-lock.json — معلومات التبعيات
-└── start.cmd — تشغيل سريع على Windows
-
-🛠️ Requirements
-
-قبل تشغيل المشروع تحتاج إلى:
-
-Node.js
-Git
-Discord Bot
-Discord Bot Token
-اتصال بالإنترنت
-
-يفضل استخدام إصدار حديث ومدعوم من Node.js.
-
-☁️ Free Hosting — Wispbyte
-
-يمكنك تشغيل البوت محليًا على جهازك، أو رفعه إلى خدمة استضافة.
-
-Wispbyte توفر استضافة يمكن استخدامها لتشغيل البوت:
-
-🌐 https://wispbyte.com/
-
-بعد رفع المشروع إلى الاستضافة، قم بتثبيت التبعيات باستخدام:
-
-npm install
-
-ثم شغّل البوت:
-
-npm start
-
-أو:
-
-node index.js
-
-🔐 Security
-
-لا تقم برفع المعلومات الحساسة إلى GitHub، خصوصًا:
-
-Discord Bot Token
-API Keys
-Passwords
-Database Credentials
-
-إذا تم تسريب Discord Bot Token، قم بإلغائه وإنشاء Token جديد من Discord Developer Portal.
-
-📜 Usage & Permissions
-No Official License File
-
-هذا المشروع لا يحتوي حاليًا على ملف LICENSE رسمي داخل المستودع.
-
-وبحسب الإذن الممنوح من Nova System، يمكن استخدام كود المشروع كأساس للتطوير وإعادة البناء.
-
-يسمح لك ذلك بـ:
-
-تعديل الكود.
-إعادة هيكلة المشروع.
-إضافة أو إزالة الميزات.
-تغيير التصميم والواجهة.
-إنشاء نسخة خاصة بك.
-استخدام المشروع كأساس لمشروع جديد.
-تطوير نسخة تجارية.
-بيع نسختك المعدلة.
-إعادة توزيع نسختك المعدلة.
-
-لا يشترط أن تبقى النسخة التي تطورها مطابقة للمشروع الأصلي.
-
-مهم: هذا الإذن يتعلق بكود المشروع نفسه، أما المكتبات والتبعيات الخارجية فتخضع لرخصها وشروطها الخاصة.
-
-كما أن استخدام المشروع لا يمنحك حقوق Discord أو العلامات التجارية أو الملفات الصوتية أو أي محتوى تابع لأطراف أخرى.
-
-🚀 Fork It. Modify It. Rebuild It.
-
-هذا المشروع ليس منتجًا نهائيًا.
-
-إنه Starting Point.
-
-إذا وجدت طريقة أفضل لبنائه — غيّره.
-
-إذا أردت Dashboard مختلفة — ابنِها.
-
-إذا أردت إضافة Database — أضفها.
-
-إذا أردت إعادة كتابة المشروع بالكامل — افعلها.
-
-إذا أردت تحويل البوت البسيط إلى مشروع أكبر — Go for it.
-
-Start simple. Build something bigger.
-
-🤝 Contributing
-
-المساهمات مرحب بها.
-
-يمكنك عمل Fork للمشروع، تطوير ميزات جديدة أو إصلاح المشاكل، ثم إرسال Pull Request.
-
-سواء كانت مساهمتك صغيرة أو إعادة بناء كبيرة، فأنت مرحب بك.
-
-💬 Support & Community
-
-للدعم الفني، مناقشة التطوير، مشاركة الأفكار والتواصل مع مجتمع:
-
-𝑵𝒐𝒗𝒂 𝑺𝒚𝒔𝒕𝒆𝒎
-
-انضم إلى Discord:
-
-https://discord.gg/REenS3jB72
-
-❤️ Support Nova System
-
-إذا استفدت من المشروع وأردت دعم استمرار تطوير مشاريع Nova System، يمكنك الدعم عبر PayPal:
-
-https://paypal.me/Alaaabushamaa
-
-كل دعم يساعد على استمرار تطوير المشاريع وتجربة أفكار جديدة.
-
-🔗 Links
-
-GitHub:
-https://github.com/abushama1-ar/bot_voic
-
-Wispbyte:
-https://wispbyte.com/
-
-Discord — Nova System:
-https://discord.gg/REenS3jB72
-
-PayPal:
-https://paypal.me/Alaaabushamaa
-
-𝑵𝒐𝒗𝒂 𝑺𝒚𝒔𝒕𝒆𝒎
-
-Simple Base. Open Development. Your Ideas.
-
-خذ المشروع، طوّره، أعد بناءه، وحوّله إلى شيء خاص بك.
-
-Fork it. Modify it. Rebuild it. Make it yours.
+</div> ```
